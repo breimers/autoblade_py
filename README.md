@@ -14,7 +14,7 @@ Purpose:
 
 Dependencies:
 
-	ffmpeg (system), python3 (system), subprocesses (python3), time(python3)
+	ffmpeg (system), ffprobe (system), python3 (system), subprocesses (python3), time(python3)
 
 
 Use:
@@ -29,3 +29,41 @@ Use:
 Output:
 
 	output00$.mp4 *n
+
+
+
+Thoughts:
+	
+	Wow! Who knew passing outputs from a subprocess to string would be so convoluted?
+
+	I first considered using the ffmpy python library instead of subprocesses, but the set-up format was not conductive
+
+	to a multistep task. So I used subprocesses to essentially automate a process the user can do on their own.
+
+	If I wasn't self-imposing a time-limit, I would figure out the ffmpy formatting and check for dependencies in the
+	
+	script. This way the user is worrying about less.
+
+	Also stackoverflow is amazing and there are some great contributors out there.
+
+
+
+To-do:
+
+	Implement using ffmpy
+	
+	Check for dependencies
+
+	Auto-Install dependencies
+	
+	Give option for custom filenames
+
+
+
+Curiosities:
+
+	Managing subprocesses
+	
+	Passing data between subprocesses without storing python variable
+
+	Modularity of subprocess commands
